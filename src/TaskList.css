@@ -1,0 +1,105 @@
+.task-list {
+    padding: 20px;
+}
+
+.task-list h1 {
+    margin-bottom: 20px;
+}
+
+.view-switch {
+    margin-bottom: 20px;
+}
+
+.view-switch button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.view-switch button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.task-title .stage {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.stage.todo {
+    background-color: blue;
+}
+
+.stage.in-progress {
+    background-color: orange;
+}
+
+.stage.completed {
+    background-color: green;
+}
+
+.priority.high {
+    color: red;
+    font-weight: bold;
+}
+
+.priority.normal {
+    color: orange;
+}
+
+.priority.low {
+    color: green;
+}
+
+.actions button {
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.board-view {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .board-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 30%; /* Adjust based on your layout */
+    box-sizing: border-box;
+  }
+  
+  .board-card h3 {
+    margin-top: 0;
+  }
+  
+  .board-card .actions {
+    margin-top: 10px;
+  }
+  
+  .board-card .actions button {
+    margin-right: 5px;
+  }
+  

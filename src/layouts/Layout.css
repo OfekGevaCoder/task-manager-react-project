@@ -1,0 +1,12 @@
+.layout {
+    display: flex;
+    height: 100vh; /* Make sure the layout takes the full height of the viewport */
+  }
+  
+  .content {
+    margin-left: 250px; /* This should match the width of your sidebar */
+    padding: 20px;
+    width: calc(100% - 250px); /* Ensure the content takes the rest of the space */
+    overflow-y: auto; /* Add scrolling if content overflows */
+  }
+  

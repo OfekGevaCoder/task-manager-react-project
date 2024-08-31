@@ -1,0 +1,112 @@
+body.active-modal {
+    overflow-y: hidden;
+}
+h2{
+    margin: 0.85em;
+}
+.btn-modal {
+    padding: 1% 20px;
+    display: block;
+    margin: 100px auto 0;
+    font-size: 18px;
+}
+.modal-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 3px;
+    max-width: 600px;
+    min-width: 300px;
+    display: block;
+}
+
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49,49,49, 0.8);
+}
+
+
+form {
+    display: flex;
+    flex-wrap: wrap; /* Allows multiple items per row */
+    gap: 10px;
+    width: 100%;  /* Space between form groups */
+
+}
+
+.form-group {
+    width: 50%; /* Ensure the form group takes the full width */
+    margin-bottom: 100px;
+     /* Space between form groups */
+}
+
+label {
+    font-weight: bold;
+    width: 70%;
+    text-align: left;
+    display: block; /* Ensure label is treated as a block element */
+}
+
+
+input[type="date"]{
+    margin-bottom: 5px;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 50%;
+    box-sizing: border-box;
+    font-size: 16px;  /* Adjust font size */
+    line-height: 1.4; 
+    display: block; 
+}
+
+input[type="text"],
+select {
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Make input/select take full width */
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.4;
+    display: block; /* Ensure input/select is treated as a block element */
+    margin-top: ; /* Space between label and input */
+}
+
+.modal-content button {
+    background: #3a5de8;
+    color: #fff;
+    border: 0;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight:bold;
+}
+
+button.submit-modal:hover {
+    background: #133de4;
+}
+
+button.close-modal {
+    position:block;
+    background-color: #85818a8e;
+}
+button.close-modal:hover {
+    background-color:#635e68da;
+}
+
+
