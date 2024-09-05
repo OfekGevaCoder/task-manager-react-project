@@ -106,9 +106,7 @@ button.close-modal:hover {
 button.btn-modal {
     background-image: linear-gradient(to right, #7f00ff, #e100ff);
     color: white;
-    border: 1px solid #ccc;
     position:absolute;
-    text-align:justify;
     right: 0; /* Aligns the button to the right */
 
 }

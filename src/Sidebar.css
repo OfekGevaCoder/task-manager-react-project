@@ -2,12 +2,12 @@
     height: 100vh;
     width: 210px;
     position: fixed;
-    top: 0;
     left: 0;
     background-color: white;
     color: white;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease; /* Smooth transition for width changes */
 }
 
 .sidebar h1 {
@@ -17,8 +17,9 @@
     margin-bottom: 98px;
     margin-top: 14px;
     padding: 12px;
-    border-radius: 1000000000000px; /* Rounds the corners of the box */
-    display: inline-block; /* Ensures box-shadow is applied around the text */
+    border-radius: 100px; /* Rounds the corners */
+    display: inline-block;
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
 }
 
 .sidebar .links {
@@ -33,25 +34,74 @@
     text-decoration: none;
     padding: 15.4px 20px;
     font-size: 18px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, padding-left 0.3s ease; /* Smooth transition for hover */
     margin-bottom: 5px; /* Ensure space between active and other links */
-
 }
 
 .sidebar .links a:hover {
     color: white;
     background-image: linear-gradient(to right, #7f00ff, #e100ff);
-    padding-left: 25px;
+    padding-left: 25px; /* Slide padding on hover */
     border-radius: 10px;
     cursor: pointer;
 }
+
 .sidebar .links a.active-link {
     background-image: linear-gradient(to right, #7f00ff, #e100ff); /* Background for active link */
     color: white;  /* Keep the text white for active links */
     font-weight: bold;
     padding-left: 25px; /* Add padding */
     border-radius: 10px;
-    margin-bottom: 5px; /* Ensure space between active and other links */
-
 }
 
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Make sidebar full-width on smaller screens */
+        height:auto; /* Allow height to fit the content */
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        background-color: white; /* Optional: adjust background color */
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        padding: 0;
+    }
+
+    .sidebar h1 {
+        display: none; /* Hide the title for mobile */
+    }
+
+    .sidebar .links {
+        display: flex;
+        flex-direction: row; /* Align links in a row */
+        justify-content: space-around; /* Space out the links evenly */
+        width: 100%; /* Make the links container take full width */
+        
+    }
+
+    .sidebar .links a {
+        font-size: 12px; /* Adjust font size for mobile */
+        padding: 0;
+        text-align: center;
+        flex: 1; /* Make links take up equal space */
+        margin-bottom: 0;
+    }
+
+    .sidebar .links a:hover{
+        text-align: center;
+        background-image: linear-gradient(to bottom, #7f00ff, #e100ff); /* Optional: change hover background */
+        color: white;
+    }
+    .sidebar .links a.active-link {
+    background-image: linear-gradient(to right, #7f00ff, #e100ff); /* Background for active link */
+    color: white;  /* Keep the text white for active links */
+    font-weight: bold;
+    padding-left: 0; /* cancel padding */
+    border-radius: 10px;
+    flex: 1; /* Make links take up equal space */
+
+
+}
+}

@@ -24,14 +24,26 @@
   
 
 @media (max-width: 1200px) {
-    .board-card {
-        width: calc(50% - 20px); /* 2 cards per row on medium screens */
-    }
+  .board-view {
+    display: flex;
+    flex-wrap: wrap; /* Allows the cards to wrap if there's not enough space */
+    justify-content: flex-start; 
+    gap: 20px; /* Space between the cards */
+    width: 100%; /* Ensure the board view takes up the full width */
+    box-sizing: border-box;
 }
 
-@media (max-width: 800px) {
+}
+
+@media (max-width: 1000px) {
     .board-card {
-        width: calc(100% - 20px); /* 1 card per row on small screens */
+      background-color:white;
+      border-radius: 8px;
+      padding: 10px;
+      width: calc(50% - 10px); /* 2 cards per row, minus gap adjustment */
+      box-sizing: border-box;
+      box-shadow: 1px 1px 2px #f9f9f9; 
+      cursor: pointer;
     }
 }
 

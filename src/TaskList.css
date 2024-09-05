@@ -10,7 +10,6 @@
 }
 .view-switch-create-task button {
     padding: 10px 10px;
-    background-color: #7f00ff;
     background-image: linear-gradient(to right, #7f00ff, #e100ff);
     color: white;
     border: 0px solid white;

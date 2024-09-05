@@ -10,4 +10,14 @@
     overflow-y: auto; /* Add scrolling if content overflows */
     background-color: #f8f2f8;
   }
+
+  @media (max-width: 768px) {
+    .content{
+      width: 100%;
+      margin-left: 0; /* This should match the width of your sidebar */
+
+
+    }
+    
+  }
   
