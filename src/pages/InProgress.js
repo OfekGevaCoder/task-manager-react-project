@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import useFetch from "../useFetch.js";
+import axios from 'axios';
 import TaskList from '../TaskList.js';
 
-const Todo = () => {
+const InProgress = () => {
     const { error, isPending, data: initialTasks } = useFetch('http://localhost:8000/tasks');
     const [tasks, setTasks] = useState([]);
 
@@ -13,12 +13,13 @@ const Todo = () => {
         }
     }, [initialTasks]);
 
-    const todoTasks = tasks.filter(task => task.stage.trim().toLowerCase() === 'todo');
+    // Filter tasks to only include those with "in-progress" stage
+    const inProgressTasks = tasks.filter(task => task.stage.trim().toLowerCase() === 'in-progress');
 
     const handleDelete = (taskId) => {
         axios.delete(`http://localhost:8000/tasks/${taskId}`)
             .then(() => {
-                setTasks(prevTasks => prevTasks.filter(task => task.id !== taskId));
+                setTasks(tasks.filter(task => task.id !== taskId)); 
             })
             .catch(err => {
                 console.error('Failed to delete task:', err);
@@ -34,19 +35,18 @@ const Todo = () => {
     };
 
     return (
-        <div className="tasks">
+        <div className="in-progress-page">
             { error && <div>{ error }</div> }
             { isPending && <div>Loading...</div> }
             <TaskList 
-                tasks={todoTasks} 
-                pageTitle="ToDo Tasks" 
+                tasks={inProgressTasks} 
                 handleDelete={handleDelete} 
                 handleEdit={handleEdit} 
-                handleAdd={handleAdd}
-                pageType="ToDo" 
-                /> 
+                handleAdd={handleAdd} 
+                pageType="In-Progress" 
+            /> 
         </div>
     );
 }
 
-export default Todo;
+export default InProgress;

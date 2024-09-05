@@ -1,15 +1,8 @@
-body.active-modal {
-    overflow-y: hidden;
-}
+
 h2{
     margin: 0.85em;
 }
-.btn-modal {
-    padding: 1% 20px;
-    display: block;
-    margin: 100px auto 0;
-    font-size: 18px;
-}
+
 .modal-content {
     position: absolute;
     top: 40%;
@@ -83,7 +76,7 @@ select {
     font-size: 16px;
     line-height: 1.4;
     display: block; /* Ensure input/select is treated as a block element */
-    margin-top: ; /* Space between label and input */
+    margin-top: 10; /* Space between label and input */
 }
 
 .modal-content button {
@@ -109,4 +102,14 @@ button.close-modal:hover {
     background-color:#635e68da;
 }
 
+
+button.btn-modal {
+    background-image: linear-gradient(to right, #7f00ff, #e100ff);
+    color: white;
+    border: 1px solid #ccc;
+    position:absolute;
+    text-align:justify;
+    right: 0; /* Aligns the button to the right */
+
+}
 

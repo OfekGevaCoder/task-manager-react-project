@@ -1,20 +1,23 @@
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 import './AddTaskForm';
 
 const EditTaskForm = ({ taskId, onEdit, onClose }) => {
     const [title, setTitle] = useState('');
     const [stage, setStage] = useState('todo');
+    const [created_at, setCreated_at] = useState('');
     const [date, setDate] = useState('');
     const [priority, setPriority] = useState('normal');
     const [body, setBody] = useState('');
 
     useEffect(() => {
         if (taskId) {
-            fetch(`http://localhost:8000/tasks/${taskId}`)
-                .then(response => response.json())
-                .then(data => {
+            axios.get(`http://localhost:8000/tasks/${taskId}`)
+                .then(response => {
+                    const data = response.data;
                     setTitle(data.title);
                     setStage(data.stage);
+                    setCreated_at(data.created_at);
                     setDate(data.date);
                     setPriority(data.priority);
                     setBody(data.body);
@@ -28,7 +31,7 @@ const EditTaskForm = ({ taskId, onEdit, onClose }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const updatedTask = { id: taskId, title, stage, date, priority, body };
+        const updatedTask = { id: taskId, title, stage, created_at,date, priority, body };
 
         fetch(`http://localhost:8000/tasks/${taskId}`, {
             method: 'PUT',

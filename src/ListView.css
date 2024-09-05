@@ -1,0 +1,61 @@
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.task-title .stage {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.stage.todo {
+    background-color: blue;
+}
+
+.stage.in-progress {
+    background-color: orange;
+}
+
+.stage.completed {
+    background-color: green;
+}
+
+.priority.high {
+    color: red;
+    font-weight: bold;
+}
+
+.priority.normal {
+    color: orange;
+}
+
+.priority.low {
+    color: green;
+}
+
+.actions button {
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+
+button.delete-button {
+color: red;
+}
+button.details-button {
+    color: black;
+}

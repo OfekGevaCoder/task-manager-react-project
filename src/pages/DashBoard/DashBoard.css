@@ -1,0 +1,40 @@
+.dashboard {
+  display: flex;
+  justify-content: space-between; /* Add space between the components */
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.task-stage-pie-chart {
+  width: 30%; /* Make the pie chart section smaller */
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  
+}
+
+.pie-container {
+  height: 300px; /* Control the size of the pie chart */
+  position: relative; /* Needed for Pie chart to render properly */
+}
+
+.upcoming-tasks {
+  width: 30%; /* Make the pie chart section smaller */
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.upcoming-task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.upcoming-task-list li {
+  padding: 10px;
+  background: #7f00ff;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
